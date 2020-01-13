@@ -109,7 +109,18 @@ view: vw_credit_card_bookings {
 
   dimension: week {
     type: number
-    sql: ${TABLE}."WEEK" ;;
+    sql: case
+    when ${TABLE}."WEEK" = '1' then '01'
+    when ${TABLE}."WEEK" = '2' then '02'
+    when ${TABLE}."WEEK" = '3' then '03'
+    when ${TABLE}."WEEK" = '4' then '04'
+    when ${TABLE}."WEEK" = '5' then '05'
+    when ${TABLE}."WEEK" = '6' then '06'
+    when ${TABLE}."WEEK" = '7' then '07'
+    when ${TABLE}."WEEK" = '8' then '08'
+    when ${TABLE}."WEEK" = '9' then '09'
+    else ${TABLE}."WEEK"
+    END ;;
   }
 
   dimension: weekday {
@@ -141,12 +152,12 @@ view: vw_credit_card_bookings {
     value_format_name: gbp
   }
 
-  measure: Percentage_of_GM {
-    label: "% of GM"
-    type: percent_of_previous
-    sql: ${TABLE}."GM£" ;;
-    value_format_name: percent_2
-  }
+##  measure: Percentage_of_GM {
+##    label: "% of GM"
+##    type: percent
+##    sql: ${TABLE}."GM£" ;;
+##    value_format_name: percent_2
+##  }
 
 
 }
