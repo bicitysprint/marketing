@@ -23,6 +23,7 @@ view: vw_credit_card_bookings {
       time,
       time_of_day,
       date,
+      day_of_week,
       week,
       month,
       quarter,
