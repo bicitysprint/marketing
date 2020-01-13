@@ -46,6 +46,7 @@ view: vw_credit_card_bookings {
   }
 
   dimension: from_suburb_code {
+    label: "From Postcode"
     type: string
     sql: ${TABLE}."FROM_SUBURB_CODE" ;;
   }
@@ -77,6 +78,7 @@ view: vw_credit_card_bookings {
   }
 
   dimension: service {
+    label: "Service - Vehicle Type"
     type: string
     sql: ${TABLE}."SERVICE" ;;
   }
@@ -87,6 +89,7 @@ view: vw_credit_card_bookings {
   }
 
   dimension: to_suburb_code {
+    label: "To Postcode"
     type: string
     sql: ${TABLE}."TO_SUBURB_CODE" ;;
   }
