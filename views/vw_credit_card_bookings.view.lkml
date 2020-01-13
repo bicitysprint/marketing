@@ -139,7 +139,13 @@ view: vw_credit_card_bookings {
     type: sum
     sql: ${TABLE}."GM£" ;;
     value_format_name: gbp
+  }
 
+  measure: Percentage_of_GM {
+    label: "% of GM"
+    type: percent_of_previous
+    sql: ${TABLE}."GM£" ;;
+    value_format_name: percent_2
   }
 
 
