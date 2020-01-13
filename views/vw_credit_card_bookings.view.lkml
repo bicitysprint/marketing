@@ -121,7 +121,9 @@ view: vw_credit_card_bookings {
     when ${TABLE}."WEEK" = '9' then '09'
     else ${TABLE}."WEEK"
     END ;;
+    value_format_name: id
   }
+
 
   dimension: weekday {
     type: string
