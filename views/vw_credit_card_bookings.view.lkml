@@ -21,6 +21,7 @@ view: vw_credit_card_bookings {
     timeframes: [
       raw,
       time,
+      time_of_day,
       date,
       week,
       month,
