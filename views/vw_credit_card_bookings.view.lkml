@@ -51,6 +51,7 @@ view: vw_credit_card_bookings {
   }
 
   dimension: gm {
+    label: "GM£"
     type: number
     sql: ${TABLE}."GM£" ;;
   }
@@ -119,4 +120,21 @@ view: vw_credit_card_bookings {
     type: count
     drill_fields: []
   }
+
+  measure: sum_of_revenue {
+    label: "Sum of Revenue"
+    type: sum
+    sql: ${TABLE}."REVENUE" ;;
+    value_format_name: gbp
+  }
+
+  measure: sum_of_GM {
+    label: "Sum of GM"
+    type: sum
+    sql: ${TABLE}."GM£" ;;
+    value_format_name: gbp
+
+  }
+
+
 }
