@@ -96,11 +96,13 @@ view: vw_credit_card_bookings {
   }
 
   dimension: umbrella_group {
+    hidden: no
     type: string
     sql: ${TABLE}."UMBRELLA_GROUP" ;;
   }
 
   dimension: umbrella_service {
+    hidden:  no
     type: string
     sql: ${TABLE}."UMBRELLA_SERVICE" ;;
   }
