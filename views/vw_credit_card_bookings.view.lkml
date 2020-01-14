@@ -139,6 +139,7 @@ view: vw_credit_card_bookings {
   measure: count {
     type: count
     drill_fields: [count_fields*]
+    link: {label: "Drill Sorted by count" url: "{{ count_id._link}}&sorts=vw_credit_card_bookings.year+month+week+day" }
   }
 
 ##  measure: count_of_bookings {
