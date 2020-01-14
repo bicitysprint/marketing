@@ -175,6 +175,8 @@ view: vw_credit_card_bookings {
       month,
       week,
       day,
+      service_centre,
+      service,
       bookings,
       revenue
     ]
