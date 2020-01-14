@@ -141,11 +141,11 @@ view: vw_credit_card_bookings {
     drill_fields: []
   }
 
-  measure: count_of_bookings {
-    label: "Count of Bookings"
-    sql: ${TABLE}.BOOKINGS ;;
-    type: count_distinct
-  }
+##  measure: count_of_bookings {
+##    label: "Count of Bookings"
+##    sql: ${TABLE}.BOOKINGS ;;
+##    type: count_distinct
+##  }
 
   measure: sum_of_revenue {
     label: "Sum of Revenue"
