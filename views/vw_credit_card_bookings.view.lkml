@@ -4,6 +4,7 @@ view: vw_credit_card_bookings {
   dimension: booking_type {
     type: string
     sql: ${TABLE}."Booking Type" ;;
+
   }
 
   dimension: bookings {
@@ -13,11 +14,11 @@ view: vw_credit_card_bookings {
 
   dimension: cc_account_type {
     type: string
-    sql:case
-        when ${TABLE}."CC_ACCOUNT_TYPE" = 'CitySprint Online' or "CC_ACCOUNT_TYPE" = 'CitySprint App' then 'App/Online Account'
-        else ${TABLE}."CC_ACCOUNT_TYPE"
-        END ;;
-  }
+    sql: case
+      when ${TABLE}."CC_ACCOUNT_TYPE" = 'CitySprint Online' or "CC_ACCOUNT_TYPE" = 'CitySprint App' then 'App/Online Account'
+      else ${TABLE}."CC_ACCOUNT_TYPE"
+      END  ;;
+   }
 
   dimension_group: date {
     type: time
