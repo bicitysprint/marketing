@@ -133,7 +133,7 @@ view: vw_credit_card_bookings {
   }
 
   dimension: year {
-    type: number
+    type: string
     sql: ${TABLE}."YEAR" ;;
   }
 
