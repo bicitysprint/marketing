@@ -152,6 +152,7 @@ view: vw_credit_card_bookings {
     type: sum
     sql: ${TABLE}."REVENUE" ;;
     value_format_name: gbp
+    drill_fields: [revenue_fields*]
   }
 
   measure: sum_of_GM {
@@ -167,6 +168,22 @@ view: vw_credit_card_bookings {
 ##    sql: ${TABLE}."GM£" ;;
 ##    value_format_name: percent_2
 ##  }
+
+  set: revenue_fields {
+    fields: [
+      year,
+      month,
+      week,
+      day,
+      bookings,
+      revenue
+    ]
+  }
+
+
+
+
+
 
 
 }
