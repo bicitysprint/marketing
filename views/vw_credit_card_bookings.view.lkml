@@ -77,6 +77,7 @@ view: vw_credit_card_bookings {
   dimension: revenue {
     type: number
     sql: ${TABLE}."REVENUE" ;;
+    value_format_name: gbp
   }
 
   dimension: service {
@@ -163,12 +164,12 @@ view: vw_credit_card_bookings {
     value_format_name: gbp
   }
 
-##  measure: Percentage_of_GM {
-##    label: "% of GM"
-##    type: percent
-##    sql: ${TABLE}."GM£" ;;
-##    value_format_name: percent_2
-##  }
+  measure: Percentage_of_GM {
+    label: "% of GM"
+    type: number
+    sql: ${sum_of_GM} / ${sum_of_revenue} ;;
+    value_format_name: percent_2
+  }
 
   set: revenue_fields {
     fields: [
