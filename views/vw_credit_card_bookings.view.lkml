@@ -198,10 +198,10 @@ view: vw_credit_card_bookings {
 
  set: gm_fields  {
    fields: [
-     week,
      date_week,
      sum_of_revenue,
-     sum_of_GM
+     sum_of_GM,
+     Percentage_of_GM
    ]
  }
 
