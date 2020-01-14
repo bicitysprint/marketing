@@ -169,6 +169,7 @@ view: vw_credit_card_bookings {
     type: number
     sql: ${sum_of_GM} / ${sum_of_revenue} ;;
     value_format_name: percent_2
+    drill_fields: [gm_fields*]
   }
 
   set: revenue_fields {
