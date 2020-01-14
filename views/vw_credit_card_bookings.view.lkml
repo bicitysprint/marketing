@@ -138,7 +138,7 @@ view: vw_credit_card_bookings {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [count_fields*]
   }
 
 ##  measure: count_of_bookings {
@@ -182,6 +182,18 @@ view: vw_credit_card_bookings {
     ]
   }
 
+ set: count_fields {
+   fields: [
+     year,
+      month,
+      week,
+      day,
+      service_centre,
+      service,
+      bookings,
+      count
+   ]
+ }
 
 
 
